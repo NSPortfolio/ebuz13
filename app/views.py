@@ -2,22 +2,22 @@ from django.shortcuts import render
 from app import forms
 
 def indexpage(request):
-    return render(request,'templates/index.html')
+    return render(request,'index.html')
 
 def homepage(request):
-    return render(request,'templates/homepage.html')
+    return render(request,'homepage.html')
 
 def websites(request):
     post_form = forms.PostOrganization()
-    return render(request, 'templates/mywebsite.html', {
+    return render(request, 'mywebsite.html', {
         "post_form": post_form,
     })
 
 def example(request):
     post_form = forms.PostOrganization()
-    return render(request, 'templates/web.html', {
+    return render(request, 'web.html', {
         "post_form": post_form,
     })
 
 def search(request):
-    return render(request, 'templates/search.html')
+    return render(request, 'search.html')
