@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>E-Buz</title>
+    <link rel='shortcut icon' href = "https://user-images.githubusercontent.com/76495035/154708549-f85664ac-762b-4c93-a532-0313585ee72a.png" type = "image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+      {% load bootstrap4 %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript jquery='full' %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">
+          <img src="https://user-images.githubusercontent.com/76495035/154708549-f85664ac-762b-4c93-a532-0313585ee72a.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          E-Buz
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+          <form class="form-inline">
+            <div class="nav-item dropdown ml-3">
+              <a class="nav-link dropdown-toggle text-dark" href="/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Search for Startups
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item text-dark" href="/searchforstartups/">Bakeries</a>
+                <a class="dropdown-item text-dark" href="/searchforclubs/">Toys</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Electronics</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Skin Care</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Jewelry/Fashion</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Art</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Clothing</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Books/Movies</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Customizable Products</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Other</a>
+              </div>
+            </div>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/myposts/">My Websites</a>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/following/">Liked Products</a>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/following/">Following</a>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/popular/">Top Start-Ups</a>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/popular/">Recommendations</a>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/popular/">Invest</a>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/profile/">Profile</a>
+                <a href='/sign-out' class="btn btn-outline-primary ml-2">Sign Out</a>
+          </form>
+      </nav>
+
+    <style>
+    body
+     {
+      margin: 0;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #FFFFFF;
+      font-family: Copperplate;
+    }
+
+    .topnav a {
+      float: right;
+      color: black;
+      padding: 20px;
+      text-decoration: none;
+      font-size: 20px;
+      font-family: 'Baloo Tammudu 2', cursive;
+    }
+
+    .topnav a:hover {
+      background-color: #C0C0C0;
+      color: black;
+      font-family: 'Baloo Tammudu 2', cursive;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .containertwo {
+      position: relative;
+      height: 480px;
+      width: 100%;
+      background-color:#E6E6FA;
+    }
+
+    .containerthree {
+      position: relative;
+      height: 400px;
+      width: 100%;
+      background-color:white;
+    }
+
+    .containerfour {
+      position: relative;
+      height: 480px;
+      width: 100%;
+      background-color:	#8ab9f1;
+    }
+
+    .text-block {
+         position: absolute;
+         top: 150px;
+         left: 50px;
+         border-radius: 8px;
+         background-color: white;
+         padding: 20px;
+       }
+
+    .text-block-two {
+         position: absolute;
+         top: 50px;
+         left: 50px;
+         border-radius: 8px;
+         background-color: white;
+         padding: 20px;
+         width:60%
+       }
+
+    .text-block-three {
+         position: absolute;
+         top: 50px;
+         right: 50px;
+         border-radius: 8px;
+         background-color: white;
+         padding: 20px;
+         width:60%
+       }
+
+    .imagebox {
+      position: absolute;
+      left: 2px;
+      top:2px;
+    }
+
+    .cartoonbox {
+      position: absolute;
+      right: 40px;
+      top:50px;
+    }
+
+    .cartoonboxtwo {
+      position: absolute;
+      left: 60px;
+      top:50px;
+    }
+
+   </style>
+
+     <div class="p-5 bg-image" style="background-image: url('https://user-images.githubusercontent.com/76495035/154710078-e6e59fd1-d28a-442c-9ebb-f6399905b75c.PNG'); height: 600px; background-size:cover; background-repeat:no-repeat;">
+        <div class="text-block">
+             <h1 style = "font-family:oswald;color:black;font-size:50px">E-Buz</h1>
+             <p style = "font-family: 'Baloo Tammudu 2', cursive; color:black;font-size:20px">Harness the BUZZ of E-COMMERCE and <br>create an e-commerce website in just a few clicks</p><br><br>
+             <a href = "#learnmore" style = "border:none; color:white; padding:12px; font-family:oswald; text-decoration: none; font-size: 24px; background-color:#004AAD; border-radius: 12px; left: 150px;" class= "button">Learn More</a>
+        </div>
+     </div>
+
+    <div id = "learnmore" class="containertwo">
+     <table><tr><td>
+     <div class="text-block-two">
+         <h1 style = "font-family:oswald;color:#484848;font-size:40px">Reduce Costs</h1>
+         <p style = "font-family: 'Baloo Tammudu 2', cursive; color:gray;font-size:20px">No need to pay extra on hosting, deploying, and designing your website. Our free domains names give you connection to the E-Buz community and your own brand.</p><br>
+      </div></td><td>
+      <div class="cartoonbox">
+     <img src = "https://user-images.githubusercontent.com/76495035/154712559-7d6770c1-94c3-4a8b-aa47-b55d4250991a.png" height = 180;>
+      </div></td></tr></table>
+    </div><br><br>
+
+   <div class="containerthree">
+     <table><tr><td>
+     <div class="cartoonboxtwo">
+         <img src = "https://user-images.githubusercontent.com/76495035/122312759-8127e580-ceda-11eb-8b22-f5c8ce9fc565.png" height = 300;>
+      </div></td><td>
+      <div class="text-block-three">
+         <h1 style = "font-family:oswald;color:#484848;font-size:40px">Join a Community</h1>
+         <p style = "font-family: 'Baloo Tammudu 2', cursive; color:gray;font-size:20px">Explore popular start-ups on our leaderboard and join our email list for recommendations on where to shop next. Search for your favorite products and start-ups and promote the E-Buz Start-up community.</p>
+      </div></td></tr></table>
+   </div> <br><br>
+
+   <div class="containerfour">
+     <table><tr><td>
+     <div class="text-block-two">
+         <h1 style = "font-family:oswald;color:#484848;font-size:40px">Search and Promote Start-Ups</h1>
+         <p style = "font-family: 'Baloo Tammudu 2', cursive; color:gray;font-size:20px">Search for your favorite products and start-ups and promote the E-Buz Start-up community</p>
+     </div></td><td>
+      <div class="cartoonbox">
+     <img src = "https://user-images.githubusercontent.com/76495035/122312760-81c07c00-ceda-11eb-8076-84baf2e992e3.png" height = 350;>
+      </div></td></tr></table>
+   </div> <br><br>
+
+   <div class="containerthree">
+     <table><tr><td>
+     <div class="cartoonboxtwo">
+         <img src = "https://user-images.githubusercontent.com/76495035/122312756-808f4f00-ceda-11eb-9aad-5a429c7828e0.png" height = 250;>
+      </div></td><td>
+      <div class="text-block-three">
+         <h1 style = "font-family:oswald;color:#484848;font-size:40px">Invest in Start-Ups and Get Investors</h1>
+         <p style = "font-family: 'Baloo Tammudu 2', cursive; color:gray;font-size:20px">Contact businesses on our platform and begin investing in promising e-commerce start-ups. List your business for investors and expand.</p>
+      </div></td></tr></table>
+   </div> <br><br>
+
+   <div class="containertwo">
+     <table><tr><td>
+     <div class="text-block-two">
+         <h1 style = "font-family:oswald;color:#484848;font-size:40px">Save Time</h1>
+         <p style = "font-family: 'Baloo Tammudu 2', cursive; color:gray;font-size:20px">E-Buz reduces the time it takes to generate an e-commerce website and feedback forms with efficient styling and credibility under E-Buz.</p>
+     </div></td><td>
+      <div class="cartoonbox">
+     <img src = "https://user-images.githubusercontent.com/76495035/122312754-7ff6b880-ceda-11eb-9aa8-6dfd232cf6ae.png" height = 350;>
+      </div></td></tr></table>
+   </div>
+
+    <div class="containerfour">
+      <div class="text-block-two">
+       <h1 style = "font-family:oswald;color:#484848;font-size:40px">Costs for Student Packages and Individual Packages</h1><br><br>
+       <table style="margin-left:50px;">
+           <tr>
+               <td>
+                   <div class="card" style="width: 35rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">College/Institution/High School Package</h5>
+                        <p class="card-text">Provide E-Buz's service to up to 100 students for $2299.99 per year.</p>
+                        <a href="#" class="btn btn-primary">Purchase</a>
+                      </div>
+                   </div>
+               </td>
+               <td>
+                   <div class="card" style="width: 30rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">Individual Package</h5>
+                        <p class="card-text">Use all of E-Buz's services for $24.99 per year.</p>
+                        <a href="#" class="btn btn-primary">Purchase</a>
+                      </div>
+                   </div>
+               </td>
+           </tr>
+       </table>
+      </div>
+    </div>
+
+  <footer class="text-center mt-5 mb-5">
+    &copy; 2022, E-Buz
+  </footer>
+</body>
+</html>

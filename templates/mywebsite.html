@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>E-Buz</title>
+    <link rel='shortcut icon' href = "https://user-images.githubusercontent.com/76495035/154708549-f85664ac-762b-4c93-a532-0313585ee72a.png" type = "image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+      {% load bootstrap4 %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript jquery='full' %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">
+          <img src="https://user-images.githubusercontent.com/76495035/154708549-f85664ac-762b-4c93-a532-0313585ee72a.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          E-Buz
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+          <form class="form-inline">
+            <div class="nav-item dropdown ml-3">
+              <a class="nav-link dropdown-toggle text-dark" href="/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Search for Startups
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item text-dark" href="/searchforstartups/">Bakeries</a>
+                <a class="dropdown-item text-dark" href="/searchforclubs/">Toys</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Electronics</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Skin Care</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Jewelry/Fashion</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Art</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Clothing</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Books/Movies</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Customizable Products</a>
+                <a class="dropdown-item text-dark" href="/searchforevents/">Other</a>
+              </div>
+            </div>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/myposts/">My Websites</a>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/following/">Liked Products</a>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/following/">Following</a>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/popular/">Top Start-Ups</a>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/popular/">Recommendations</a>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/popular/">Invest</a>
+                <a class="nav-link mr-2 ml-2 text-dark" href="/profile/">Profile</a>
+                <a href='/sign-out' class="btn btn-outline-primary ml-2">Sign Out</a>
+          </form>
+      </nav>
+
+    <br><br>
+            <div class="row">
+              <div class="col-lg-4" style="margin-left:50px">
+                <b class="text-secondary text-dark" style="font-size:25px">Create A Website</b><br><br>
+                <div class="card bg-white mt-2 mb-5">
+                    <div class="card-body">
+                        <p class="text-secondary text-dark" style="font-size:20px">Information</p>
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {% bootstrap_form_errors post_form %}
+                            <p class="text-secondary text-dark" style="font-size:18px">Email</p>
+                            <input type="text" class="form-control" placeholder="amandasbakery@gmail.com"><br>
+                            {% bootstrap_label "Name of Start-Up" %}
+                            {% bootstrap_field post_form.name_of_organization show_label=False placeholder="Amanda's Bakery" %}
+                            {% bootstrap_label "Category of Start-Up" %}
+                            {% bootstrap_field post_form.organization show_label=False placeholder="" %}
+                            {% bootstrap_label "Shipping, Pickup, or Both" %}
+                            {% bootstrap_field post_form.communication show_label=False %}
+                            {% bootstrap_label "Address" %}
+                            {% bootstrap_field post_form.area show_label=False placeholder="" %}
+                            {% bootstrap_label "Description" %}
+                            {% bootstrap_field post_form.description show_label=False placeholder="" %}
+                            {% bootstrap_label "Seek Investors" %}
+                            {% bootstrap_field post_form.yes show_label=False %}
+                            {% bootstrap_label "Add Header Image" %}
+                            {% bootstrap_field post_form.file show_label=False %}
+                            <input type="hidden" name="step" value="1">
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </form>
+                    </div>
+                </div>
+              </div>
+            </div>
+  <footer class="text-center mt-5 mb-5">
+    &copy; 2022, E-Buz
+  </footer>
+  </body>
+ </html>
