@@ -70,6 +70,12 @@ TEMPLATES = [
 ]
 
 DATABASES = {
+    'default': {
+        'NAME': 'defaultdb',
+        'ENGINE': 'django.db.backends.mysql',
+        'USER': 'root',
+        'PASSWORD': 'unicorn'
+    },
 }
 
 
