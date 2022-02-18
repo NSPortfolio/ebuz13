@@ -69,6 +69,10 @@ TEMPLATES = [
     },
 ]
 
+DATABASES = {
+}
+
+
 WSGI_APPLICATION = 'ebuz.wsgi.application'
 
 # Password validation
