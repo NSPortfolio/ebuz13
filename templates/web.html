@@ -96,6 +96,27 @@
                 </div>
               </div>
             </div>
+    
+           <div class="row">
+              <div class="col-lg-4" style="margin-left:50px">
+                <b class="text-secondary text-dark" style="font-size:25px">Feedback Form</b><br><br>
+                <div class="card bg-white mt-2 mb-5">
+                    <div class="card-body">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {% bootstrap_form_errors post_form %}
+                            <input type="text" class="form-control" placeholder="Age Range" disabled><br>
+                            <input type="text" class="form-control" placeholder="How did you hear about us?" disabled><br>
+                            <input type="text" class="form-control" placeholder="How did you like our products?" disabled><br>
+                            <input type="text" class="form-control" placeholder="Anything else" disabled><br>
+                            <input type="hidden" name="step" value="1">
+                            <button type="submit" class="btn btn-primary">Edit</button>
+                            <button type="submit" class="btn btn-primary">View Responses</button>
+                        </form>
+                    </div>
+                </div>
+              </div>
+            </div>
 
 
   <footer class="text-center mt-5 mb-5">
